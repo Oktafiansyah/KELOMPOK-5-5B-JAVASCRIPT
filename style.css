@@ -1,0 +1,589 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.body-color {
+    background-color: var(--primary-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    position: fixed;
+    transition: all 300ms ease-in-out;
+    height: 80px;
+}
+
+.navbar-judul a {
+    font-family: "permanent marker";
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+.navbartoogle a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    display: inline-block;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.navbartoogle a:hover {
+    background-color: var(--secondary-color);
+}
+
+.Nama-Brand {
+    font-family: "permanent marker";
+    font-size: 3rem;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    padding-top: 65px;
+    color: var(--secondary-color);
+
+}
+.head {
+    background-image: url(Images/Large\ Photo\ Shoes.png);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+} 
+
+.body {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 1.5rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+.Quotation {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    font-family: "kalam";
+    margin-bottom: 70px;
+    color: var(--secondary-color);
+}
+
+.best-seller{
+    background-color: var(--secondary-color);
+    padding: 15px 15px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+/*gambar slide*/
+.gallery{
+    width: 100%;
+}
+
+.gallery-container{
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.gallery-item{
+    height: 200px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+}
+
+.gallery-item-2, .gallery-item-4{
+    height: 250px;
+    opacity: 0.8;
+    width: 380px;
+    z-index: 1;
+}
+
+.gallery-item-2{
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-3{
+    box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    z-index: 2;
+}
+
+.gallery-item-4{
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.gallery-item-5{
+    left: 85%;
+    opacity: 4;
+    transform: translateX(-50%);
+}
+
+.gallery-controls{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
+
+.gallery-controls button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+
+.gallery-controls-button:focus{
+    outline: none;
+}
+
+.gallery-controls-previous{
+    position: relative;
+    color: var(--secondary-color)
+}
+
+.gallery-controls-previous::before{
+    border: solid var(--secondary-color);
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-previous:hover::before{
+    left: -10px;
+}
+
+.gallery-controls-next{
+    position: relative;
+    color: var(--secondary-color)
+}
+
+.gallery-controls-next::before{
+    border: solid var(--secondary-color);
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: 90px;
+    padding: 10px;
+    position: absolute;
+    top: 45%;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-next:hover::before{
+    left: 70px;
+}
+
+/*Adidas Produk*/
+.title-adidas {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+.adidas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+} 
+.produk-adidas {
+    background-color: var(--secondary-color);
+    padding: 1.5em;
+    width: 200px;
+    text-align: center;
+    border-radius: 6px;
+    color: var(--primary-color);
+}
+
+.produk-adidas img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+}
+.produk-adidas h3 {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+.produk-adidas button {
+    padding: 10px 20px;
+    background-color: #919191;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.produk-adidas button:hover {
+    background-color: #808080;
+}   
+
+#adidas1 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#adidas2 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#adidas3 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#adidas4 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/*Nike Produk*/
+.title-nike {
+    background-color: var(--secondary-color);
+    padding: 15px 15px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+.nike {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+} 
+.produk-nike {
+    background-color: var(--secondary-color);
+    padding: 1.5em;
+    width: 200px;
+    text-align: center;
+    border-radius: 6px;
+    color: var(--primary-color);
+}
+
+.produk-nike img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+}
+.produk-nike h3 {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+.produk-nike button {
+    padding: 10px 20px;
+    background-color:  #919191;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #808080;
+}   
+
+#nike1 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#nike2 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#nike3 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#nike4 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/*Puma Produk*/
+.title-puma {
+    background-color: var(--secondary-color);
+    padding: 15px 15px ;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.puma {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+} 
+.produk-puma {
+    background-color: var(--secondary-color);
+    padding: 1.5em;
+    width: 200px;
+    text-align: center;
+    border-radius: 6px;
+    color: var(--primary-color);
+}
+
+.produk-puma img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6)
+}
+.produk-puma h3 {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+.produk-puma button {
+    padding: 10px 20px;
+    background-color:  #919191;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #808080;
+}   
+
+#puma1 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#puma2 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#puma3 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+#puma4 {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 30px; /* Sesuaikan ukuran logo */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1); /* Efek hover untuk memperbesar logo */
+    background-color: rgb(91, 104, 100);
+}
+
+/*footer dan icons*/
+/* Gaya umum untuk footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+
+/* Kontainer ikon media sosial */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Gaya umum untuk ikon */
+.icon {
+    color: var(--primary-color);
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+/* Gaya ikon Whatsapp*/
+.icon.whatsapp:hover {
+    background-color: #39db6a;
+    color: var(--primary-color);
+}
+
+/* Gaya ikon Instagram */
+.icon.instagram:hover {
+    background-color: #e4405f;
+    color: var(--primary-color);
+}
+    
+button.id {
+    border: 10px
+}
+
+.container {
+    font-family: "kalam";
+    background-color: var(--secondary-color);
+    box-shadow: 0 1px 4px black rgba(0, 0, 0, 0.3) ;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+button.active {
+    opacity: 0.8;
+}
+
+.modal {
+    background-color: burlywood rgba (0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0,3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.modal-inner {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px #111 rgba (0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+}
+
+.modal-inner h2 {
+    margin: 0;
+}
+
+.modal-inner p {
+    line-height: 24px;
+    margin: 10px 0;
+}
